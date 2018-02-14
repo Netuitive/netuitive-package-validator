@@ -4,6 +4,7 @@ var jsonValidator = require('json-dup-key-validator');
 var ErrorTracker = require('../util/errorTracker');
 
 var indent = '    ';
+var validAnalyticTypes = ['ACE', 'COMPUTED_METRIC', 'METRIC_META'];
 
 var Logger = require('../util/logger');
 var logger = new Logger(indent);
@@ -22,6 +23,8 @@ function validate(analyticsList, location, analytic) {
     errorTracker.assertTrue(!jsonParseError, 'No duplicate object keys');
 
     var ana = JSON.parse(json);
+
+    errorTracker.assertTrue(validAnalyticTypes.includes(ana.analyticConfiguration.type), 'Analytic type is valid');
 
     errorTracker.assertTrue(true, 'Analytic is valid JSON');
 

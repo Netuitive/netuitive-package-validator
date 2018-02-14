@@ -1,6 +1,6 @@
 {
   "name": "package-validator",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Netuitive package validator",
   "main": "./validation/package.js",
   "bin": {
