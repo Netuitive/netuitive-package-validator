@@ -1,3 +1,5 @@
+**NOTICE:** This project has been deprecated in place of the [Metricly CLI](https://github.com/metricly/metricly-cli)
+
 # Package Validator
 Small script for parsing and validating packages.
 
